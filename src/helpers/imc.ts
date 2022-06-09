@@ -18,8 +18,9 @@ export const calculateImc = (height: number, weight: number) => {
 
   for (let i in levels) {
     if (imc >= levels[i].imc[0] && imc < levels[i].imc[1]) {
-      levels[i].yourImc = imc;
-      return levels[i];
+      let copyLevel: Level = {...levels[i]};
+      copyLevel.yourImc = parseFloat(imc.toFixed(2));
+      return copyLevel;
     }
   }
 
