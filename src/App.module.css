@@ -61,8 +61,15 @@ body {
 
   transition: opacity ease .3s;
 }
+
 .container .leftSide button:hover {
   opacity: .9;
+}
+
+.container .leftSide input:disabled,
+.container .leftSide button:disabled {
+  opacity: .5;
+  cursor:auto;
 }
 
 .container .rightSide {
